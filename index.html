@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>R&B - Rémy et Gabriella NDONDA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+    <!-- Lien vers le fichier CSS externe -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Style global */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        /* En-tête */
+        header {
+            background-color: #6a4c93;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 2.5em;
+            border-bottom: 4px solid #4b2e83;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #4b2e83;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ead9d9;
+        }
+
+        /* Sections */
+        section {
+            display: none;
+            padding: 40px;
+            margin: 0 auto;
+            max-width: 1200px;
+            border-radius: 8px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            transition: opacity 0.5s ease;
+        }
+
+        section h2 {
+            color: #6a4c93;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Style des images */
+        .images {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .image-item {
+            width: 280px;
+            height: 280px;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .image-item:hover {
+            transform: scale(1.05);
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Méditation et contenu */
+        .meditation-programme, .rendez-vous, .love-poems, .prayer-topics {
+            background-color: #faf1f1;
+            border-left: 8px solid #6a4c93;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .meditation-programme li, .rendez-vous li, .love-poems li, .prayer-topics li {
+            font-size: 1.2em;
+            margin: 15px 0;
+        }
+
+        .love-poems li {
+            font-style: italic;
+            color: #a62ad7;
+        }
+
+        .links {
+            color: #6a4c93;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 30px;
+            display: block;
+        }
+
+        .links:hover {
+            text-decoration: underline;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        section {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        /* Cœurs et fleurs */
+        .love-poems::before {
+            content: "❤️🌸 ";
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <h1>R&B - Rémy et Gabriella</h1>
+    </header>
+
+    <!-- Menu de navigation -->
+    <nav>
+        <a href="javascript:void(0);" onclick="openTab('home')">Accueil</a>
+        <a href="javascript:void(0);" onclick="openTab('meditation')">Méditations</a>
+        <a href="javascript:void(0);" onclick="openTab('rendezvous')">Rendez-vous</a>
+        <a href="javascript:void(0);" onclick="openTab('love')">Love</a>
+        <a href="javascript:void(0);" onclick="openTab('prayer')">Sujets de prière</a>
+        <a href="javascript:void(0);" onclick="openTab('photos')">Photos & Vidéos</a>
+    </nav>
+
+    <!-- Accueil -->
+    <section id="home" style="display: block;">
+        <h2>Bienvenue dans notre espace</h2>
+        <p>Bienvenue dans notre univers privé. Nous partageons nos moments précieux, méditations et réflexions personnelles. Explorez notre voyage spirituel et notre vision commune.</p>
+    </section>
+
+    <!-- Méditations -->
+    <section id="meditation" class="meditation-programme">
+        <h2>Méditations Hebdomadaires</h2>
+        <ul>
+            <li>Lundi : "Confiance en Dieu dans la prière" - "Commence ta semaine dans la paix de Dieu."</li>
+            <li>Mardi : "Le pardon dans nos relations" - "Que le pardon purifie ton cœur."</li>
+            <li>Mercredi : "La gratitude en toute circonstance" - "Exprime ta reconnaissance pour chaque moment."</li>
+            <li>Jeudi : "La force de l'amour de Dieu" - "L'amour incommensurable de Dieu nous guide."</li>
+            <li>Vendredi : "Vivre dans l'espoir" - "En Dieu, l'espoir est une ancre de l'âme."</li>
+            <li>Samedi : "L'importance de la méditation sur la parole" - "Réfléchis sur ce que Dieu a pour toi cette semaine."</li>
+            <li>Dimanche : "Le repos dans le Seigneur" - "Repose-toi en Dieu et trouve ta paix intérieure."</li>
+        </ul>
+    </section>
+
+    <!-- Rendez-vous -->
+    <section id="rendezvous" class="rendez-vous">
+        <h2>Rendez-vous de la Semaine</h2>
+        <ul>
+            <li>Cette semaine, nous avons rendez-vous chez Nicky, Jeudi.</li>
+        </ul>
+    </section>
+
+    <!-- Poèmes d'Amour -->
+    <section id="love" class="love-poems">
+        <h2>Poèmes d'Amour</h2>
+        <ul>
+            <li>"L'amour est patient, il est bienveillant." - 1 Corinthiens 13:4</li>
+            <li>"L'amour parfait chasse la peur." - 1 Jean 4:18</li>
+            <li>Tu es toutes les couleurs en une, dans toute leur intensité.</li>
+            <li>Que ton amour soit plus délicieux que le vin!" – Cantique des Cantiques 1:2</li>
+        </ul>
+    </section>
+
+    <!-- Sujets de prière -->
+    <section id="prayer" class="prayer-topics">
+        <h2>Sujets de prière</h2>
+        <ul>
+            <li>Prions pour la paix dans nos familles et nos cœurs.</li>
+            <li>Prions pour notre couple.</li>
+            <li>Demandons à Dieu de guider nos choix et décisions dans tous les domaines de nos vies.</li>
+            <li>Prions pour les âmes perdues et pour ceux qui ont besoin de la grâce de Dieu.</li>
+        </ul>
+    </section>
+
+    <!-- Photos & Vidéos -->
+    <section id="photos" class="images">
+        <div class="image-item">
+            <img src="images/WhatsApp-Image-2025-02-25-at-17.jpg" alt="Image WhatsApp">
+        </div>
+        <div class="image-item">
+            <img src="images/photo2.jpg" alt="Photo 2">
+        </div>
+        <!-- Ajouter d'autres images si nécessaire -->
+    </section>
+
+    <script>
+        function openTab(tabName) {
+            // Cacher toutes les sections
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.style.display = 'none');
+            
+            // Afficher la section correspondante
+            const activeTab = document.getElementById(tabName);
+            if (activeTab) {
+                activeTab.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+</html>
