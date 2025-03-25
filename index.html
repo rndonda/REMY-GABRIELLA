@@ -230,25 +230,67 @@
         </ul>
     </section>
 
-    <!-- Photos & Vidéos -->
-    <section id="photos" class="images">
-        <div class="image-item">
-           
-          
-        </div>
-        <div class="image-item" alt="photo">
+   <!-- Photos & Vidéos -->
+<section id="photos" class="images">
+    <h2>Galerie de Photos</h2>
+    <div class="gallery">
+        <a href="https://i.ibb.co/tpnyhwpr/IMG-20250225-WA0022.jpg" data-lightbox="gallery">
             <img src="https://i.ibb.co/tpnyhwpr/IMG-20250225-WA0022.jpg" alt="Image 1">
+        </a>
+        <a href="https://i.ibb.co/MxzY2fsg/IMG-20250225-WA0037.jpg" data-lightbox="gallery">
             <img src="https://i.ibb.co/MxzY2fsg/IMG-20250225-WA0037.jpg" alt="Image 2">
+        </a>
+        <a href="https://i.ibb.co/yDWj2gw/IMG-20250225-WA0038.jpg" data-lightbox="gallery">
             <img src="https://i.ibb.co/yDWj2gw/IMG-20250225-WA0038.jpg" alt="Image 3">
+        </a>
+        <a href="https://i.ibb.co/q3633By4/IMG-20250225-WA0062.jpg" data-lightbox="gallery">
             <img src="https://i.ibb.co/q3633By4/IMG-20250225-WA0062.jpg" alt="Image 4">
+        </a>
+        <a href="https://i.ibb.co/wFDgYvt3/IMG-20250225-WA0063.jpg" data-lightbox="gallery">
             <img src="https://i.ibb.co/wFDgYvt3/IMG-20250225-WA0063.jpg" alt="Image 5">
+        </a>
+        <a href="https://i.ibb.co/20V2tymx/IMG-20250225-WA0064.jpg" data-lightbox="gallery">
             <img src="https://i.ibb.co/20V2tymx/IMG-20250225-WA0064.jpg" alt="Image 6">
+        </a>
+        <a href="https://i.ibb.co/V0fWK9mL/IMG-20250225-WA0065.jpg" data-lightbox="gallery">
             <img src="https://i.ibb.co/V0fWK9mL/IMG-20250225-WA0065.jpg" alt="Image 7">
+        </a>
+        <a href="https://i.ibb.co/xqmk3Yzb/IMG-20250225-WA0066.jpg" data-lightbox="gallery">
             <img src="https://i.ibb.co/xqmk3Yzb/IMG-20250225-WA0066.jpg" alt="Image 8">
+        </a>
+        <a href="https://i.ibb.co/hJRq1gxr/IMG-20250225-WA0067.jpg" data-lightbox="gallery">
             <img src="https://i.ibb.co/hJRq1gxr/IMG-20250225-WA0067.jpg" alt="Image 9">
+        </a>
+        <a href="https://i.ibb.co/sp87Xs1c/IMG-20250225-WA0068.jpg" data-lightbox="gallery">
             <img src="https://i.ibb.co/sp87Xs1c/IMG-20250225-WA0068.jpg" alt="Image 10">
-        </div>
-        
+        </a>
+    </div>
+</section>
+
+<!-- CSS pour la mise en page -->
+<style>
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+        padding: 10px;
+    }
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
+    .gallery img:hover {
+        transform: scale(1.1);
+    }
+</style>
+
+<!-- Lightbox pour agrandir les images en cliquant -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
         <a href="TON_LIEN_HUMANATA" target="_blank" class="links">📂 Voir plus sur Humanata</a>
 
         <!-- Ajouter d'autres images si nécessaire -->
