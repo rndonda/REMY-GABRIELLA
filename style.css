@@ -1,11 +1,11 @@
 /* Style global */
 body {
     font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(180deg, #f9f9f9, #e3d6ff);
+    background: linear-gradient(135deg, #f9f9f9, #eae2f2);
     margin: 0;
     padding: 0;
     color: #333;
-    transition: background 0.5s ease-in-out;
+    overflow-x: hidden;
 }
 
 /* En-tête */
@@ -13,145 +13,77 @@ header {
     background: linear-gradient(135deg, #6a4c93, #4b2e83);
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 40px 20px;
     font-size: 2.5em;
-    border-bottom: 4px solid #4b2e83;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    animation: slideInDown 1s ease;
+    border-bottom: 5px solid #4b2e83;
+    position: relative;
+    animation: fadeInDown 1s ease-out;
 }
 
-@keyframes slideInDown {
-    0% { transform: translateY(-100%); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
-}
-
-header h1 {
-    margin: 0;
+header::after {
+    content: '\u271D'; /* Croix */
+    font-size: 1.5em;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    opacity: 0.7;
 }
 
 /* Navigation */
 nav {
-    background: #4b2e83;
+    background-color: #4b2e83;
     color: white;
-    padding: 12px;
+    padding: 15px;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: fadeIn 1.2s ease-out;
 }
 
 nav a {
     color: white;
     text-decoration: none;
     margin: 0 20px;
-    font-size: 1.2em;
-    font-weight: 600;
-    transition: color 0.3s ease, transform 0.3s ease;
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out, transform 0.3s ease;
+    display: inline-block;
 }
 
 nav a:hover {
-    color: #ead9d9;
+    color: #f9d342;
     transform: scale(1.1);
 }
 
-/* Sections */
-section {
-    display: none;
-    padding: 40px;
-    margin: 20px auto;
-    max-width: 1200px;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    background: #fff;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    transform: scale(0.95);
-}
-
-section.show {
-    display: block;
-    opacity: 1;
-    transform: scale(1);
-}
-
-section h2 {
-    color: #6a4c93;
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-/* Style des images */
-.images {
+/* Section d'accueil */
+#accueil {
     display: flex;
-    gap: 20px;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    animation: fadeIn 1s ease-in-out;
-}
-
-.image-item {
-    width: 280px;
-    height: 280px;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.image-item:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-/* Poèmes d'Amour */
-.love-poems {
-    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-    border-left: 8px solid #6a4c93;
-    padding: 20px;
-    margin-bottom: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    flex-direction: column;
     text-align: center;
-    color: #fff;
-    animation: fadeIn 1.2s ease-in-out;
+    padding: 60px 20px;
+    background: url('background-bible-love.jpg') no-repeat center center/cover;
+    color: white;
+    min-height: 80vh;
+    position: relative;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-.love-poems h2 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 2.5em;
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+#accueil h1 {
+    font-size: 3.5em;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
 }
 
-.love-poems ul {
-    list-style: none;
-    padding: 0;
-}
-
-.love-poems li {
-    font-size: 1.2em;
-    margin: 15px 0;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    font-style: italic;
-    color: #fff;
-    transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
-}
-
-.love-poems li:hover {
-    transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.5);
-}
-
-.love-poems::before {
-    content: "❤️🌸 ";
+#accueil p {
     font-size: 1.5em;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 15px 25px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
 }
 
 /* Animations */
@@ -160,32 +92,7 @@ img {
     100% { opacity: 1; }
 }
 
-/* Style mobile */
-@media (max-width: 768px) {
-    header {
-        font-size: 2em;
-    }
-
-    nav a {
-        font-size: 1em;
-        margin: 0 10px;
-    }
-
-    .image-item {
-        width: 100%;
-        height: auto;
-    }
-
-    .images {
-        flex-direction: column;
-    }
-
-    section {
-        padding: 20px;
-    }
-}
-
-/* Effet au survol des sections */
-section:hover {
-    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
 }
