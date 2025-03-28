@@ -89,37 +89,49 @@ img {
     object-fit: cover;
 }
 
-/* Méditation et contenu */
-.meditation-programme, .rendez-vous, .love-poems, .prayer-topics {
-    background-color: #faf1f1;
+/* Poèmes d'Amour */
+.love-poems {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     border-left: 8px solid #6a4c93;
     padding: 20px;
     margin-bottom: 30px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: #fff;
 }
 
-.meditation-programme li, .rendez-vous li, .love-poems li, .prayer-topics li {
-    font-size: 1.2em;
-    margin: 15px 0;
+.love-poems h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.love-poems ul {
+    list-style: none;
+    padding: 0;
 }
 
 .love-poems li {
+    font-size: 1.2em;
+    margin: 15px 0;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     font-style: italic;
-    color: #a62ad7;
+    color: #fdfdfd;
+    transition: transform 0.3s ease-in-out;
 }
 
-.links {
-    color: #6a4c93;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 30px;
-    display: block;
+.love-poems li:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.4);
 }
 
-.links:hover {
-    text-decoration: underline;
+.love-poems::before {
+    content: "❤️🌸 ";
+    font-size: 1.5em;
 }
 
 /* Animations */
@@ -130,11 +142,6 @@ img {
 
 section {
     animation: fadeIn 0.5s ease-in-out;
-}
-
-/* Cœurs et fleurs */
-.love-poems::before {
-    content: "❤️🌸 ";
 }
 
 /* Style mobile */
