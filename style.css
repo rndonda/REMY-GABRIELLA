@@ -51,7 +51,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #bf42f9;
+    color: #9f87aa;
     transform: scale(1.1);
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Ombre du texte au survol */
 }
@@ -82,7 +82,7 @@ nav a:hover {
 
 #accueil p {
     font-size: 1.5em;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.918);
     padding: 15px 25px;
     border-radius: 10px;
     backdrop-filter: blur(5px);
