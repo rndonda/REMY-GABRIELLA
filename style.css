@@ -18,15 +18,8 @@ header {
     border-bottom: 5px solid #4b2e83;
     position: relative;
     animation: fadeInDown 1s ease-out;
-}
-
-header::after {
-    content: '\u271D'; /* Croix */
-    font-size: 1.5em;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    opacity: 0.7;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Ombre portée pour un effet de profondeur */
+    border-radius: 10px; /* Coins arrondis */
 }
 
 /* Navigation */
@@ -40,6 +33,11 @@ nav {
     top: 0;
     z-index: 1000;
     animation: fadeIn 1.2s ease-out;
+    transition: background-color 0.3s ease; /* Transition douce pour la couleur de fond */
+}
+
+nav:hover {
+    background-color: #6a4c93; /* Couleur plus claire au survol */
 }
 
 nav a {
@@ -55,6 +53,7 @@ nav a {
 nav a:hover {
     color: #bf42f9;
     transform: scale(1.1);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); /* Ombre du texte au survol */
 }
 
 /* Section d'accueil */
@@ -70,12 +69,15 @@ nav a:hover {
     min-height: 80vh;
     position: relative;
     animation: fadeIn 1.5s ease-in-out;
+    background-attachment: fixed; /* Effet de parallaxe */
+    filter: brightness(0.8); /* Assombrit l'image de fond */
 }
 
 #accueil h1 {
     font-size: 3.5em;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     margin-bottom: 10px;
+    animation: zoomIn 1s ease-out;
 }
 
 #accueil p {
@@ -84,6 +86,7 @@ nav a:hover {
     padding: 15px 25px;
     border-radius: 10px;
     backdrop-filter: blur(5px);
+    animation: fadeInUp 1s ease-out;
 }
 
 /* Animations */
@@ -94,5 +97,15 @@ nav a:hover {
 
 @keyframes fadeInDown {
     0% { opacity: 0; transform: translateY(-30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(20px); }
     100% { opacity: 1; transform: translateY(0); }
 }
