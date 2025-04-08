@@ -170,11 +170,80 @@
     </nav>
 
     <!-- Accueil -->
-    <section id="home" style="display: block;">
+    <section id="home" class="home-section">
         <h2>Bienvenue dans notre espace</h2>
-        <p>Bienvenue dans notre univers privé. Nous partageons nos moments précieux, méditations et réflexions personnelles. Explorez notre voyage spirituel et notre vision commune.</p>
+        <p>
+            Bienvenue dans notre univers privé. Nous partageons nos moments précieux, nos méditations et réflexions personnelles. 
+            Explorez notre voyage spirituel et notre vision commune.
+        </p>
     </section>
-
+    <style>
+        .home-section {
+            padding: 80px 20px;
+            background: linear-gradient(to bottom right, #f8f9fc, #eef1f7);
+            text-align: center;
+            border-radius: 20px;
+            max-width: 1000px;
+            margin: 50px auto;
+            animation: fadeIn 1.2s ease both;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        }
+    
+        .home-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #333;
+            font-weight: 700;
+            position: relative;
+        }
+    
+        .home-section h2::after {
+            content: "";
+            width: 80px;
+            height: 4px;
+            background: #7f5af0;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+    
+        .home-section p {
+            font-size: 1.2rem;
+            line-height: 1.7;
+            color: #555;
+            max-width: 800px;
+            margin: auto;
+            padding: 0 10px;
+        }
+    
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        @media (max-width: 768px) {
+            .home-section {
+                padding: 60px 15px;
+            }
+    
+            .home-section h2 {
+                font-size: 2rem;
+            }
+    
+            .home-section p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    
     <!-- Méditations -->
     <section id="meditation" class="meditation-programme">
         <h2>Méditations Hebdomadaires</h2>
