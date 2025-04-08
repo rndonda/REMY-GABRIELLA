@@ -247,18 +247,109 @@
     <!-- Méditations -->
     <section id="meditation" class="meditation-programme">
         <h2>Méditations Hebdomadaires</h2>
-        <a href="https://www.bible.com/fr/bible/93/PSA.1.LSG" target="_blank" class="links">📖 LA BIBLE</a>
-
-        <ul>
-            <li>Lundi 24/03 : "Confiance en Dieu dans la prière" - "Commence ta semaine dans la paix de Dieu.EPHS 4"</li>
-            <li>Mardi 25/03 : "Le pardon dans nos relations" - "Que le pardon purifie ton cœur.EPHS 5"</li>
-            <li>Mercredi 26/03 : "La gratitude en toute circonstance" - "Exprime ta reconnaissance pour chaque moment.EPHS 6"</li>
-            <li>Jeudi 27/03 : "La force de l'amour de Dieu" - "L'amour incommensurable de Dieu nous guide.EPHS 7"</li>
-            <li>Vendredi 28/03  : "Vivre dans l'espoir" - "En Dieu, l'espoir est une ancre de l'âme.EPHS 8"</li>
-            <li>Samedi 29/03 : "L'importance de la méditation sur la parole" - "Réfléchis sur ce que Dieu a pour toi cette semaine.EPHS 9"</li>
-            <li>Dimanche 30/03 : "Le repos dans le Seigneur" - "Repose-toi en Dieu et trouve ta paix intérieure.EPHS 10"</li>
+        <a href="https://www.bible.com/fr/bible/93/PSA.1.LSG" target="_blank" class="bible-link">📖 Lire la Bible</a>
+    
+        <ul class="meditation-list">
+            <li><strong>Lundi 24/03 :</strong> <em>"Confiance en Dieu dans la prière"</em> – Commence ta semaine dans la paix de Dieu. <span class="verset">Ephésiens 4</span></li>
+            <li><strong>Mardi 25/03 :</strong> <em>"Le pardon dans nos relations"</em> – Que le pardon purifie ton cœur. <span class="verset">Ephésiens 5</span></li>
+            <li><strong>Mercredi 26/03 :</strong> <em>"La gratitude en toute circonstance"</em> – Exprime ta reconnaissance pour chaque moment. <span class="verset">Ephésiens 6</span></li>
+            <li><strong>Jeudi 27/03 :</strong> <em>"La force de l'amour de Dieu"</em> – L'amour incommensurable de Dieu nous guide. <span class="verset">Ephésiens 7*</span></li>
+            <li><strong>Vendredi 28/03 :</strong> <em>"Vivre dans l'espoir"</em> – En Dieu, l'espoir est une ancre de l'âme. <span class="verset">Ephésiens 8*</span></li>
+            <li><strong>Samedi 29/03 :</strong> <em>"L'importance de la méditation sur la Parole"</em> – Réfléchis à ce que Dieu veut te dire cette semaine. <span class="verset">Ephésiens 9*</span></li>
+            <li><strong>Dimanche 30/03 :</strong> <em>"Le repos dans le Seigneur"</em> – Repose-toi en Dieu et trouve ta paix intérieure. <span class="verset">Ephésiens 10*</span></li>
         </ul>
     </section>
+    <style>
+        .meditation-programme {
+            background: #f9f5ff;
+            padding: 60px 20px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            max-width: 1000px;
+            margin: 60px auto;
+            animation: fadeInUp 1s ease both;
+        }
+    
+        .meditation-programme h2 {
+            text-align: center;
+            font-size: 2.4rem;
+            margin-bottom: 25px;
+            color: #5d3fd3;
+            font-weight: bold;
+        }
+    
+        .bible-link {
+            display: inline-block;
+            margin: 0 auto 30px;
+            padding: 12px 24px;
+            background: #5d3fd3;
+            color: white;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+    
+        .bible-link:hover {
+            background: #432ac0;
+        }
+    
+        .meditation-list {
+            list-style: none;
+            padding: 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    
+        .meditation-list li {
+            background: white;
+            border-left: 5px solid #5d3fd3;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            color: #444;
+            transition: transform 0.3s ease;
+        }
+    
+        .meditation-list li:hover {
+            transform: translateX(10px);
+            background: #f0ebfc;
+        }
+    
+        .meditation-list em {
+            font-style: italic;
+            color: #222;
+        }
+    
+        .verset {
+            color: #7f5af0;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+    
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    
+        @media (max-width: 768px) {
+            .meditation-programme h2 {
+                font-size: 2rem;
+            }
+    
+            .meditation-list li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+    
 
     <!-- Rendez-vous -->
     <section id="rendezvous" class="rendez-vous">
