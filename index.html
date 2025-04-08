@@ -240,8 +240,9 @@
     </section>
 
   <!-- Photos & Vidéos -->
-  <section id="photos" class="images">
-    <h2>Galerie de Photos</h2>
+<!-- Galerie de Photos -->
+<section id="photos" class="images">
+    <h2 class="gallery-title">📸 Galerie de Photos</h2>
     <div class="gallery">
         <a href="https://i.ibb.co/q3633By4/IMG-20250225-WA0062.jpg" data-lightbox="gallery">
             <img src="https://i.ibb.co/q3633By4/IMG-20250225-WA0062.jpg" alt="Image 4">
@@ -274,9 +275,95 @@
             <img src="https://i.ibb.co/tM0m2jfj/IMG-20240902-185428-696.jpg" alt="Image 12">
         </a>
     </div>
-    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 </section>
+
+<!-- Style Pro et Cool -->
+<style>
+    section.images {
+        max-width: 1200px;
+        margin: auto;
+        padding: 40px 20px;
+        background: #f5f7fa;
+        border-radius: 16px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+        animation: fadeInUp 1s ease both;
+    }
+
+    .gallery-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 30px;
+        color: #333;
+        font-weight: 700;
+        position: relative;
+    }
+
+    .gallery-title::after {
+        content: "";
+        width: 60px;
+        height: 4px;
+        background: #7f5af0;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 2px;
+    }
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 20px;
+    }
+
+    .gallery a {
+        overflow: hidden;
+        border-radius: 12px;
+        display: block;
+        position: relative;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.4s ease;
+    }
+
+    .gallery a:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery a:hover img {
+        transform: scale(1.05);
+    }
+
+    @keyframes fadeInUp {
+        0% {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .gallery-title {
+            font-size: 1.5rem;
+        }
+
+        .gallery {
+            gap: 14px;
+        }
+    }
+</style>
 
 
 
