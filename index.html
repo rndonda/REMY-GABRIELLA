@@ -452,22 +452,139 @@
             
         </ul>
     </section>
-
+    <style>
+        .rendez-vous {
+            background: #fff7f0;
+            padding: 50px 20px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+            max-width: 900px;
+            margin: 50px auto;
+            animation: fadeInUp 1s ease both;
+        }
+        
+        .rendez-vous h2 {
+            text-align: center;
+            font-size: 2.3rem;
+            margin-bottom: 25px;
+            color: #d17a00;
+            font-weight: bold;
+        }
+        
+        .rdv-list {
+            list-style: none;
+            padding: 0;
+            font-size: 1.15rem;
+            color: #333;
+        }
+        
+        .rdv-list > li {
+            background: #fff;
+            margin-bottom: 15px;
+            padding: 15px 20px;
+            border-left: 5px solid #d17a00;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .rdv-list > li:hover {
+            transform: translateX(10px);
+            background: #fff1e0;
+        }
+        
+        .rdv-list strong {
+            color: #b45f06;
+        }
+        
+        .sub-list {
+            list-style: none;
+            margin-top: 10px;
+            padding-left: 15px;
+        }
+        
+        .sub-list li {
+            background: #fffdf9;
+            padding: 8px 15px;
+            margin-bottom: 8px;
+            border-left: 3px solid #d17a00;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        </style>
+        
     <!-- Sujets de prière -->
     <section id="prayer" class="prayer-topics">
-        <h2>Sujets de prière</h2>
-        <ul>
-            <li>Prions pour la paix dans nos familles et nos cœurs.</li>
-            <li>Prions pour notre couple.</li>
-            <li>Demandons à Dieu de guider nos choix et décisions dans tous les domaines de nos vies.</li>
-            <li>Prions pour les âmes perdues et pour ceux qui ont besoin de la grâce de Dieu.</li>
-            <li>Prions pour Paul-Axel, que le Seigneur l'utilise avec bcp de puissance</li>
-            <li>Prions pour la foi de nos familles</li>
-            <li>Prions pour notre Eglise et pour l'Ecole de dimanche</li>
-            <li>Prions pour Moise</li>
-            <li>Prions pour ce nouveau mois d'Avril</li>
+        <h2>🙏 Sujets de Prière</h2>
+        <ul class="prayer-list">
+            <li>🕊️ Prions pour la paix dans nos familles et nos cœurs.</li>
+            <li>💑 Prions pour notre couple.</li>
+            <li>📌 Demandons à Dieu de guider nos choix et décisions dans tous les domaines de nos vies.</li>
+            <li>🌍 Prions pour les âmes perdues et pour ceux qui ont besoin de la grâce de Dieu.</li>
+            <li>🔥 Prions pour Paul-Axel, que le Seigneur l'utilise avec puissance.</li>
+            <li>💖 Prions pour la foi de nos familles.</li>
+            <li>⛪ Prions pour notre Église et pour l’École du dimanche.</li>
+            <li>🧔 Prions pour Moïse.</li>
+            <li>📅 Prions pour ce nouveau mois d'Avril.</li>
         </ul>
     </section>
+    <style>
+        .prayer-topics {
+            background: #f5f9ff;
+            padding: 50px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            max-width: 900px;
+            margin: 50px auto;
+            animation: fadeIn 1.2s ease-in-out;
+        }
+        
+        .prayer-topics h2 {
+            text-align: center;
+            font-size: 2.3rem;
+            margin-bottom: 25px;
+            color: #3b5998;
+            font-weight: bold;
+        }
+        
+        .prayer-list {
+            list-style: none;
+            padding-left: 0;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+        }
+        
+        .prayer-list li {
+            background: #ffffff;
+            margin: 10px 0;
+            padding: 15px 20px;
+            border-left: 5px solid #3b5998;
+            border-radius: 10px;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+        
+        .prayer-list li:hover {
+            background: #e8f0ff;
+            transform: translateX(5px);
+        }
+        
+        @keyframes fadeIn {
+            0% {opacity: 0; transform: translateY(30px);}
+            100% {opacity: 1; transform: translateY(0);}
+        }
+        </style>
+        
 
   <!-- Photos & Vidéos -->
 <!-- Galerie de Photos -->
@@ -598,39 +715,72 @@
 
 
 <!-- CSS pour la mise en page -->
-<style>
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 16px;
+    padding: 20px;
+    background: linear-gradient(to right, #f9f9f9, #f1f5ff);
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.gallery a {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.gallery a:hover img {
+    transform: scale(1.08);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+.gallery a::after {
+    content: "📸 Voir";
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 4px 10px;
+    font-size: 0.8rem;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.gallery a:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
     .gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 16px;
-        padding: 20px;
-        background-color: #f9f9f9;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        padding: 10px;
+        gap: 10px;
     }
+}
 
-    .gallery img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        object-fit: cover;
-    }
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-    .gallery img:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
-    }
-
-    @media (max-width: 600px) {
-        .gallery {
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-            padding: 10px;
-            gap: 10px;
-        }
-    }
-</style>
 
 <!-- Lightbox pour agrandir les images en cliquant -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
