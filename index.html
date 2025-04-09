@@ -151,13 +151,11 @@
     </style>
 </head>
 <body>
-
     <!-- En-tête -->
     <header>
         <h1>LES NDONDA</h1>
         <h1>R&G - Rémy et Gabriella </h1>
     </header>
-
     <!-- Menu de navigation -->
     <nav>
         <a href="javascript:void(0);" onclick="openTab('home')">Accueil</a>
@@ -166,9 +164,7 @@
         <a href="javascript:void(0);" onclick="openTab('love')">Love</a>
         <a href="javascript:void(0);" onclick="openTab('prayer')">Sujets de prière</a>
         <a href="javascript:void(0);" onclick="openTab('photos')">Photos & Vidéos</a>
-  
     </nav>
-
     <!-- Accueil -->
     <section id="home" class="home-section">
         <h2>Bienvenue dans notre espace</h2>
@@ -188,7 +184,6 @@
             animation: fadeIn 1.2s ease both;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
         }
-    
         .home-section h2 {
             font-size: 2.5rem;
             margin-bottom: 20px;
@@ -196,7 +191,6 @@
             font-weight: 700;
             position: relative;
         }
-    
         .home-section h2::after {
             content: "";
             width: 80px;
@@ -208,7 +202,6 @@
             transform: translateX(-50%);
             border-radius: 2px;
         }
-    
         .home-section p {
             font-size: 1.2rem;
             line-height: 1.7;
@@ -217,7 +210,6 @@
             margin: auto;
             padding: 0 10px;
         }
-    
         @keyframes fadeIn {
             from {
                 opacity: 0;
@@ -228,27 +220,22 @@
                 transform: translateY(0);
             }
         }
-    
         @media (max-width: 768px) {
             .home-section {
                 padding: 60px 15px;
             }
-    
             .home-section h2 {
                 font-size: 2rem;
             }
-    
             .home-section p {
                 font-size: 1rem;
             }
         }
-    </style>
-    
+    </style>    
     <!-- Méditations -->
     <section id="meditation" class="meditation-programme">
         <h2>Méditations Hebdomadaires</h2>
         <a href="https://www.bible.com/fr/bible/93/PSA.1.LSG" target="_blank" class="bible-link">📖 Lire la Bible</a>
-    
         <ul class="meditation-list">
             <li><strong>Lundi 24/03 :</strong> <em>"Confiance en Dieu dans la prière"</em> – Commence ta semaine dans la paix de Dieu. <span class="verset">Ephésiens 4</span></li>
             <li><strong>Mardi 25/03 :</strong> <em>"Le pardon dans nos relations"</em> – Que le pardon purifie ton cœur. <span class="verset">Ephésiens 5</span></li>
@@ -269,7 +256,6 @@
             margin: 60px auto;
             animation: fadeInUp 1s ease both;
         }
-    
         .meditation-programme h2 {
             text-align: center;
             font-size: 2.4rem;
@@ -277,7 +263,6 @@
             color: #5d3fd3;
             font-weight: bold;
         }
-    
         .bible-link {
             display: inline-block;
             margin: 0 auto 30px;
@@ -289,18 +274,15 @@
             text-decoration: none;
             transition: background 0.3s ease;
         }
-    
         .bible-link:hover {
             background: #432ac0;
         }
-    
         .meditation-list {
             list-style: none;
             padding: 0;
             max-width: 900px;
             margin: 0 auto;
         }
-    
         .meditation-list li {
             background: white;
             border-left: 5px solid #5d3fd3;
@@ -311,23 +293,19 @@
             color: #444;
             transition: transform 0.3s ease;
         }
-    
         .meditation-list li:hover {
             transform: translateX(10px);
             background: #f0ebfc;
         }
-    
         .meditation-list em {
             font-style: italic;
             color: #222;
-        }
-    
+        }  
         .verset {
             color: #7f5af0;
             font-weight: 500;
             margin-left: 8px;
         }
-    
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -338,23 +316,18 @@
                 transform: translateY(0);
             }
         }
-    
         @media (max-width: 768px) {
             .meditation-programme h2 {
                 font-size: 2rem;
             }
-    
             .meditation-list li {
                 font-size: 1rem;
             }
         }
     </style>
-    
-
     <!-- Rendez-vous -->
     <section id="rendezvous" class="rendez-vous">
         <h2>🗓️ Rendez-vous de la Semaine</h2>
-    
         <ul class="rdv-list">
             <li><strong>Mercredi :</strong> 🙏 *Prayer*</li>
             <li><strong>Jeudi :</strong> 📍 *RDV chez Nicky*</li>
@@ -377,7 +350,6 @@
             margin: 50px auto;
             animation: fadeInUp 1s ease both;
         }
-        
         .rendez-vous h2 {
             text-align: center;
             font-size: 2.3rem;
@@ -385,14 +357,12 @@
             color: #d17a00;
             font-weight: bold;
         }
-        
         .rdv-list {
             list-style: none;
             padding: 0;
             font-size: 1.15rem;
             color: #333;
         }
-        
         .rdv-list > li {
             background: #fff;
             margin-bottom: 15px;
@@ -401,16 +371,13 @@
             border-radius: 10px;
             transition: transform 0.3s ease;
         }
-        
         .rdv-list > li:hover {
             transform: translateX(10px);
             background: #fff1e0;
         }
-        
         .rdv-list strong {
             color: #b45f06;
         }
-        
         .sub-list {
             list-style: none;
             margin-top: 10px;
@@ -624,7 +591,6 @@
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox-plus-jquery.min.js"></script>
 </section>
-
 <!-- Style Pro et Cool -->
 <style>
     section.images {
@@ -636,7 +602,6 @@
         box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
         animation: fadeInUp 1s ease both;
     }
-
     .gallery-title {
         text-align: center;
         font-size: 2rem;
@@ -645,7 +610,6 @@
         font-weight: 700;
         position: relative;
     }
-
     .gallery-title::after {
         content: "";
         width: 60px;
@@ -657,13 +621,11 @@
         transform: translateX(-50%);
         border-radius: 2px;
     }
-
     .gallery {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         gap: 20px;
     }
-
     .gallery a {
         overflow: hidden;
         border-radius: 12px;
@@ -672,7 +634,6 @@
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .gallery img {
         width: 100%;
         height: 100%;
@@ -680,16 +641,13 @@
         display: block;
         transition: transform 0.4s ease;
     }
-
     .gallery a:hover {
         transform: translateY(-5px);
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     }
-
     .gallery a:hover img {
         transform: scale(1.05);
     }
-
     @keyframes fadeInUp {
         0% {
             opacity: 0;
@@ -700,30 +658,21 @@
             transform: translateY(0);
         }
     }
-
     @media (max-width: 768px) {
         .gallery-title {
             font-size: 1.5rem;
         }
-
         .gallery {
             gap: 14px;
         }
     }
 </style>
-
-
-
 <!-- CSS pour la mise en page -->
-
 <!-- Lightbox pour agrandir les images en cliquant -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-
-
         <!-- Ajouter d'autres images si nécessaire -->
     </section>
-
     <script>
         function openTab(tabName) {
             // Cacher toutes les sections
@@ -737,6 +686,5 @@
             }
         }
     </script>
-
 </body>
 </html>
